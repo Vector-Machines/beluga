@@ -43,6 +43,7 @@ find_package(
   REQUIRED)
 find_package(range-v3 REQUIRED)
 find_package(Sophus REQUIRED)
+find_package(nanoflann REQUIRED)
 find_package(TBB REQUIRED)
 
 add_library(${PROJECT_NAME} INTERFACE)
@@ -55,6 +56,7 @@ target_link_libraries(
   ${PROJECT_NAME}
   INTERFACE Eigen3::Eigen
             ${HDF5_CXX_LIBRARIES}
+            nanoflann::nanoflann
             Sophus::Sophus
             TBB::tbb
             range-v3::range-v3)
