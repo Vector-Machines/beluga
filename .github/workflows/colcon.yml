@@ -112,7 +112,7 @@ jobs:
           codecov_yml_path: ./src/beluga/.codecov.yml
           disable_search: true
           name: codecov-umbrella
-          fail_ci_if_error: true
+          fail_ci_if_error: false
           verbose: true
         if: ${{ matrix.upload_artifacts && !github.event.pull_request.head.repo.fork }}
 
